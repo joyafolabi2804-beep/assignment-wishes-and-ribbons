@@ -54,9 +54,13 @@ For a build served at a domain root, leave both environment variables unset.
 
 ## Publish changes
 
-The workflow in `.github/workflows/jekyll-gh-pages.yml` uses Node.js and Vinext, despite the filename. It installs the locked dependencies, exports the website, checks the output and deploys only `dist/client/`.
+The workflow in `.github/workflows/pages.yml` uses Node.js and Vinext. It installs the locked dependencies, exports the website with the repository URL prefix, checks the output and deploys only `dist/client/`. The build runs independently of the Pages settings, so a deployment setup problem does not prevent the website from being built and checked.
 
 In the repository's **Settings → Pages**, select **GitHub Actions** as the source. Pushes to `main` publish automatically. You can also open **Actions → Publish website to GitHub Pages → Run workflow**.
+
+This initial Pages setting requires repository administration access. If the settings page returns 404, sign in as the repository owner (`joyafolabi2804-beep`) or ask an administrator to enable Pages. The ordinary workflow `GITHUB_TOKEN` cannot enable Pages for the first time.
+
+Alternatively, an administrator can add a repository Actions secret named `PAGES_SETUP_TOKEN` containing a fine-grained GitHub token restricted to this repository with **Pages: write** and **Administration: write** permissions. The workflow uses it to enable Pages automatically. Remove the setup secret after the first successful deployment; future deployments use the default workflow token. Never put a token in the source code or README.
 
 Wait for both the **build** and **deploy** jobs to succeed before checking the live website. A workflow failure can be investigated by opening the failed step in **Actions**.
 
