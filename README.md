@@ -1,10 +1,10 @@
 # Wishes & Ribbons — assignment website
 
-A React and Vinext website, copied from the original `little-things-by-joy` project and configured for static hosting on GitHub Pages.
+A gift-themed assignment website built with React and Vinext, with a static export and an automated GitHub Pages deployment workflow.
 
-## View the published website
+## Website address
 
-Open [the live website](https://joyafolabi2804-beep.github.io/assignment-wishes-and-ribbons/).
+After GitHub Pages is enabled and deployment succeeds, open [Wishes & Ribbons](https://joyafolabi2804-beep.github.io/assignment-wishes-and-ribbons/).
 
 If clicking the link does not work, copy this address into your browser:
 
@@ -23,7 +23,7 @@ You do not need to download the code or install anything to view the website.
 5. Try a phone or a narrow browser window to check the mobile layout.
 6. After a deployment, refresh the page to see the latest version. If necessary, use **Command + Shift + R** on macOS or **Ctrl + Shift + R** on Windows/Linux.
 
-This copy is an informational landing page. Its current content still uses the original Little things by Joy branding; it does not process purchases or payments.
+This assignment is an informational landing page; it does not process purchases or payments.
 
 ## Run locally
 
